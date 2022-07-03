@@ -18,7 +18,7 @@ import java.util.LinkedList;
                     f.add(valor++);
  
                     notify();
-                    Thread.sleep(1000);
+                    Thread.sleep(500);
                 }
             }
         }
@@ -36,7 +36,7 @@ import java.util.LinkedList;
                     System.out.println("Mensagem "+ numeroMensagem +" encaminhada");
  
                     notify();
-                    Thread.sleep(1000);
+                    Thread.sleep(500);
                 }
             }
         }
