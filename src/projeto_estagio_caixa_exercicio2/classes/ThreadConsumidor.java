@@ -3,11 +3,11 @@ import java.util.LinkedList;
 
 public class ThreadConsumidor extends Thread {
 	
-	private LinkedList<Integer> f;
+	private LinkedList<String> f;
 	private int capacidadeFila;
 	private ProdutorConsumidor pc;
 	
-	public ThreadConsumidor(LinkedList<Integer> f, int capacidadeFila, ProdutorConsumidor pc) {
+	public ThreadConsumidor(LinkedList<String> f, int capacidadeFila, ProdutorConsumidor pc) {
 		this.f = f;
 		this.capacidadeFila = capacidadeFila;
 		this.pc = pc;

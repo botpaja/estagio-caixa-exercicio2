@@ -5,7 +5,7 @@ import java.util.LinkedList;
     	
     	int valor = 1;
  
-        public void produzir(int numero, LinkedList<Integer> f, int capacidadeLista) throws InterruptedException {
+        public void produzir(int numero, LinkedList<String> f, int capacidadeLista) throws InterruptedException {
             
             while (true) {
                 synchronized (this) {
@@ -13,9 +13,9 @@ import java.util.LinkedList;
                         wait();
                     }
  
-                    System.out.println("Celular "+numero+ ": mensagem " + valor);
+                    System.out.println("Celular "+numero+ ": Mensagem " + valor);
 
-                    f.add(valor++);
+                    f.add("Mensagem "+valor++);
  
                     notify();
                     Thread.sleep(500);
@@ -23,7 +23,7 @@ import java.util.LinkedList;
             }
         }
  
-        public void consumir(LinkedList<Integer> f, int capacidadeLista) throws InterruptedException{
+        public void consumir(LinkedList<String> f, int capacidadeLista) throws InterruptedException{
         	
             while(true){
                 synchronized (this){
@@ -31,9 +31,9 @@ import java.util.LinkedList;
                         wait();
                     }
  
-                    int numeroMensagem = f.removeFirst();
+                    String mensagem = f.removeFirst();
  
-                    System.out.println("Mensagem "+ numeroMensagem +" encaminhada");
+                    System.out.println(mensagem +" encaminhada");
  
                     notify();
                     Thread.sleep(500);

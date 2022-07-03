@@ -8,7 +8,7 @@ import projeto_estagio_caixa_exercicio2.classes.ThreadProdutor;
 public class Main {
     public static void main(String[] args) throws InterruptedException{
     	
-    	LinkedList<Integer> f = new LinkedList<>();
+    	LinkedList<String> f = new LinkedList<>();
         int capacidadeFila = 6;
         
         final ProdutorConsumidor pc = new ProdutorConsumidor();
